@@ -1,4 +1,6 @@
-# Micromanager
+# Micromanage
+
+*This is a proof of concept*
 
 A utility for generating object factories validated by JSON schemas.
 
