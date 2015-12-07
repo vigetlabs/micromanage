@@ -65,4 +65,10 @@ describe('Record', function() {
     assert(result.message.match(/Person/))
   })
 
+  it ('returns null on successful proptype validation', function() {
+    var result = Person.PropType({ person: { name: 'Bill' }}, 'person', 'Component')
+
+    assert.equal(result, null)
+  })
+
 })
