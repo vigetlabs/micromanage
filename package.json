@@ -8,6 +8,10 @@
     "test": "npm run lint && istanbul cover _mocha -- -R dot",
     "test:watch": "mocha -w -R dot"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vigetlabs/micromanage"
+  },
   "author": "Nate Hunzaker",
   "license": "MIT",
   "dependencies": {
