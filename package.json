@@ -1,0 +1,22 @@
+{
+  "name": "micromanage",
+  "version": "0.1.0",
+  "description": "JSON Schema enforced records.",
+  "main": "index.js",
+  "scripts": {
+    "lint": "standard lib/*.js",
+    "test": "npm run lint && mocha -R dot",
+    "test:cov": "istanbul cover _mocha -- -R dot",
+    "test:watch": "mocha -w -R dot"
+  },
+  "author": "Nate Hunzaker",
+  "license": "MIT",
+  "dependencies": {
+    "jjv": "~1.0.1"
+  },
+  "devDependencies": {
+    "istanbul": "0.4.1",
+    "mocha": "2.3.4",
+    "standard": "5.4.1"
+  }
+}
