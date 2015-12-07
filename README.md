@@ -58,3 +58,4 @@ var isValid = Cat.validate({}) // { errors: { name: 'required' } }
 ## Reference
 
 - [Understanding JSON schema](http://spacetelescope.github.io/understanding-json-schema/index.html)
+- [Property-based Testing of JSON based Web Services](http://www.prowessproject.eu/wp-content/uploads/2012/10/icws2014.pdf)
