@@ -1,1 +1,1 @@
-exports.Record = require('./record')
+exports.Record = require('./lib/record')
