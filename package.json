@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "lint": "standard lib/*.js",
-    "test": "npm run lint && mocha -R dot",
-    "test:cov": "istanbul cover _mocha -- -R dot",
+    "test": "npm run lint && istanbul cover _mocha -- -R dot",
     "test:watch": "mocha -w -R dot"
   },
   "author": "Nate Hunzaker",
