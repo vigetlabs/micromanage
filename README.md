@@ -25,7 +25,7 @@ Specifically, it aims to provide an answer for:
 
 ## Usage
 
-```
+```javascript
 var Record = require('micromanage').Record
 
 var Cat = Record({
