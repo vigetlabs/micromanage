@@ -58,4 +58,11 @@ describe('Record', function() {
     assert.equal(Person.schema, Record.env.schema.Person)
   })
 
+  it ('provides a proptype validation', function() {
+    var result = Person.PropType({ person: { name: 0 }}, 'person', 'Component')
+
+    assert(result.message.match(/Component/))
+    assert(result.message.match(/Person/))
+  })
+
 })
