@@ -4,6 +4,9 @@
 
 A utility for generating object factories validated by JSON schemas.
 
+Micromanage uses [`jjv`](https://www.npmjs.com/package/jjv) to parse
+JSON Schemas.
+
 ## Why
 
 Vanilla JavaScript objects are easy to work with. They behave as
