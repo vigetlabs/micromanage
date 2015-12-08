@@ -15,7 +15,28 @@ describe('Record', function() {
 
   it ('creates a record according to a schema', function() {
     var person = Person()
+
     assert.equal(person.name, 'Phil')
+  })
+
+  it ('manages nested properties', function() {
+    var Nested = Record({
+      title: 'NestedSchema',
+      properties: {
+        child: {
+          type: 'object',
+          properties: {
+            param: {
+              type: 'boolean',
+              default: true
+            }
+          }
+        }
+      }
+    })
+
+    var nest = Nested({})
+    assert.equal(nest.child.param, true)
   })
 
   it ('can non-destructively update a record', function() {

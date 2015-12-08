@@ -16,7 +16,7 @@ describe('getDefaultValues', function() {
     assert.equal(defaults.name, 'Bill')
   })
 
-  it ('does not include properties without defaults', function() {
+  it ('assigns undefined to keys without defaults', function() {
     var defaults = getDefaultValues({
       properties: {
         name: {
@@ -25,7 +25,7 @@ describe('getDefaultValues', function() {
       }
     })
 
-    assert.equal('name' in defaults, false)
+    assert.equal(defaults.name, undefined)
   })
 
   it ('handles a missing properties field', function() {

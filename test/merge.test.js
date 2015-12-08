@@ -11,6 +11,17 @@ describe('merge', function() {
     assert.equal(next.name, 'Gene')
   })
 
+  it ('does not copy over prototype fields', function() {
+    function Constructor() {}
+    Constructor.prototype.foo = 'bar'
+
+    var first = new Constructor()
+    var next  = merge(first, { color: 'blue' })
+
+    assert.fail('foo' in first)
+    assert.equal(next.color, 'blue')
+  })
+
   it ('creates a new object', function() {
     var first = { color: 'red' }
     var next  = merge(first, { color: 'blue' })
