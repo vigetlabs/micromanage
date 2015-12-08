@@ -19,6 +19,14 @@ describe('Record', function() {
     assert.equal(person.name, 'Phil')
   })
 
+  it ('assigns defaults given null props', function() {
+    var person = Person({
+      name: null
+    })
+
+    assert.equal(person.name, 'Phil')
+  })
+
   it ('manages nested properties', function() {
     var Nested = Record({
       title: 'NestedSchema',

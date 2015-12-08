@@ -2,6 +2,10 @@
 
 This project will not release stable updates until 1.0
 
+## 0.3.0
+
+- Assign default prop values to null keys
+
 ## 0.2.0
 
 - Add React PropType function under `Record(schema).PropType`
