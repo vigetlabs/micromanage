@@ -9,6 +9,13 @@ describe('Record', function() {
         type: 'string',
         default: 'Phil'
       },
+      rank: {
+        oneOf: [
+          { type: 'string' },
+          { type: 'null' }
+        ],
+        default: null
+      },
       age: 'number'
     }
   })
@@ -19,12 +26,26 @@ describe('Record', function() {
     assert.equal(person.name, 'Phil')
   })
 
-  it ('assigns defaults given null props', function() {
+  it ('assigns defaults given undefined props', function() {
     var person = Person({
-      name: null
+      name: undefined
     })
 
     assert.equal(person.name, 'Phil')
+  })
+
+  it ('respects null default values', function() {
+    var person = Person()
+
+    assert.equal(person.rank, null)
+  })
+
+  it ('allows null values, if the property type allows it', function() {
+    var person = Person({
+      rank: null
+    })
+
+    assert.equal(person.rank, null)
   })
 
   it ('manages nested properties', function() {
