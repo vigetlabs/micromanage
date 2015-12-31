@@ -41,11 +41,15 @@ describe('Record', function() {
   })
 
   it ('allows null values, if the property type allows it', function() {
-    var person = Person({
-      rank: null
-    })
+    var person = Person({ rank: null })
 
     assert.equal(person.rank, null)
+  })
+
+  it ('does not validate with null values, if the property type is not null', function() {
+    var person = Person({ age: null })
+
+    assert.notEqual(Person.validate(person), null)
   })
 
   it ('manages nested properties', function() {
