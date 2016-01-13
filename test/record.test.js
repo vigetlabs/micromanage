@@ -49,7 +49,7 @@ describe('Record', function() {
 
   it ('can non-destructively update a record', function() {
     var person = Person()
-    var another = Person.update(person, { name: 'Bill' })
+    var another = Person(person, { name: 'Bill' })
 
     assert.equal(another.name, 'Bill')
     assert.equal(person.name, 'Phil')

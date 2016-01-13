@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "lint": "standard lib/*.js",
-    "test": "npm run lint && istanbul cover _mocha -- -R dot",
-    "test:watch": "mocha -w -R dot"
+    "test": "mocha -R dot",
+    "test:cov": "istanbul cover _mocha -- -R dot",
+    "test:watch": "mocha -w -R min"
   },
   "repository": {
     "type": "git",
