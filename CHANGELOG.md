@@ -2,6 +2,10 @@
 
 This project will not release stable updates until 1.0
 
+## 0.4.0
+
+- Allow null values to be merged, do not merge undefined values
+
 ## 0.3.0
 
 - Assign default prop values to null keys
